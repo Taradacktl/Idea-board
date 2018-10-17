@@ -7,12 +7,13 @@ import LoginForm from './login-form';
 export function LandingPage(props) {
     // If we are logged in redirect straight to the user's dashboard
     if (props.loggedIn) {
-        return <Redirect to="/dashboard" />;
+        return <Redirect to="/dashboard/:dashboardId" />;
     }
 
     return (
         <div className="home">
-            <h2>Welcome to Foo App</h2>
+            <h2>Welcome to Notes App</h2>
+            <h3>Notes, todos, ideas, wish lists</h3>
             <LoginForm />
             <Link to="/register">Register</Link>
         </div>
